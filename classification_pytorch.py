@@ -245,7 +245,23 @@ def binary_load_and_plot_best_model():
     plot_decision_boundary(model, x_test, y_test)
     plt.show()
 
-def multiclass_load_and_plot_best_model(x_test, y_test):
+def binary_load_and_plot_best_model():
+    model = binary_classification()
+    model.load_state_dict(torch.load(BINARY_MODEL_PATH))
+    model.eval()
+
+    # Plot decision boundaries for training and test sets
+    # https://github.com/mrdbourke/pytorch-deep-learning/blob/main/helper_functions.py
+    plt.figure(figsize=(12, 6))
+    plt.subplot(1, 2, 1)
+    plt.title("Train")
+    plot_decision_boundary(model, x_train, y_train)
+    plt.subplot(1, 2, 2)
+    plt.title("Test")
+    plot_decision_boundary(model, x_test, y_test)
+    plt.show()
+
+def multiclass_load_and_plot_best_model():
     model = multiclass_classification()
     model.load_state_dict(torch.load(MULTICLASS_MODEL_PATH))
     model.eval()
@@ -273,17 +289,4 @@ if __name__ == "__main__":
     if MULTICLASS_CLASSIFICATION:
         x_train, x_test, y_train, y_test = createData_multi_classification()
         test_train_multiclass_classification(x_train, x_test, y_train, y_test)
-        multiclass_load_and_plot_best_model(x_test, y_test)
-
-
-
-
-
-
-
-
-
-
-
-
-
+        multiclass_load_and_plot_best_model()
