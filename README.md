@@ -36,7 +36,7 @@ Epoch: 750 | Train Loss: 0.01460, Train accuracy: 99.17% | Test Loss: 0.00036, T
 Epoch: 875 | Train Loss: 0.01433, Train accuracy: 99.17% | Test Loss: 0.00024, Test accuracy: 100.00%<br>
 ***************<br>
 Best saved test loss: 0.00015. Found on epoch: 975.<br>
-Model state_dict saved to path: V:\multiclass_classification_state_dict.pth <br> </i>
+Model state_dict saved to path: V:\multiclass_classification_state_dict.pth <br> </i><br>
 This is a plot of the Dataset 2. And right below it, is another plot with the trained model. There are two plots, one for the training data and one for the testing data. <br>
 ![image](https://github.com/asuzi/Classification-PyTorch/assets/61744031/6c44ebd5-c4ad-4088-a514-c89dd561fe30)
 ![image](https://github.com/asuzi/Classification-PyTorch/assets/61744031/8775368b-9336-4962-a8d7-1c2a5804904c)
